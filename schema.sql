@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS pandals (
   club_name        TEXT NOT NULL,
   address          TEXT NOT NULL DEFAULT '',
   locality         TEXT NOT NULL DEFAULT '',
-  region           TEXT NOT NULL CHECK (region IN ('North Kolkata','South Kolkata','East Kolkata','West Kolkata')),
+  region           TEXT NOT NULL CHECK (region IN ('North Kolkata','South Kolkata','East Kolkata','West Kolkata', "Central Kolkata", 'Outside Kolkata')),
   nearest_metro    TEXT NOT NULL DEFAULT '',
   metro_distance   TEXT NOT NULL DEFAULT '',
   latitude         DOUBLE PRECISION,

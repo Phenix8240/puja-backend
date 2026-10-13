@@ -1,6 +1,6 @@
 import { randomUUID } from 'node:crypto';
 
-export const REGIONS = ['North Kolkata', 'South Kolkata', 'East Kolkata', 'West Kolkata'];
+export const REGIONS = ['North Kolkata', 'South Kolkata', 'East Kolkata', 'West Kolkata', 'Central Kolkata', 'Outside Kolkata'];
 
 const keyOf = (s) => s.toLowerCase().replace(/[\s_-]/g, '');
 const pick = (obj, keys) => {
