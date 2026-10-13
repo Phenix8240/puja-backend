@@ -24,3 +24,26 @@ CREATE UNIQUE INDEX IF NOT EXISTS pandals_name_locality_uq
   ON pandals (lower(club_name), lower(locality));
 CREATE INDEX IF NOT EXISTS pandals_region_idx ON pandals (region);
 CREATE INDEX IF NOT EXISTS pandals_metro_idx ON pandals (nearest_metro);
+
+
+
+
+-- BEGIN;
+
+-- ALTER TABLE public.pandals
+-- DROP CONSTRAINT IF EXISTS pandals_region_check;
+
+-- ALTER TABLE public.pandals
+-- ADD CONSTRAINT pandals_region_check
+-- CHECK (
+--     region IN (
+--         'North Kolkata',
+--         'South Kolkata',
+--         'East Kolkata',
+--         'West Kolkata',
+--         'Central Kolkata',
+--         'Outside Kolkata'
+--     )
+-- );
+
+-- COMMIT;
